@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>net.work</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index_style.css">
+</head>
+<body>
+    <div class="recognize-container">
+        <div class='wave -one'></div>
+        <div class='wave -two'></div>
+        <div class='wave -three'></div>
+        <div class='wave -four'></div>
+        <div class="landing-logo">
+            LOGO
+        </div>
+        <form class="details-input" action="">
+            <input type="text" name="Name" placeholder="Full Name" id="name-input" oninput="this.setCustomValidity('')" required />
+            <input type="text" name="emailID" placeholder="Email ID" id="emailID-input" oninput="this.setCustomValidity('')" required />
+            <div id="checkbox-landing">
+                <input type="checkbox" name="agreeTnC" id="agreeTnC-input" onclick="this.setCustomValidity('')" required />
+                <label for="agreeTnC-input">I agree to all <a href="/TnC.html">Terms and Conditions</a></label>
+            </div>
+            <div id="submit-landing">
+                <span id="submit-icon" class="material-icons" onClick="storeLogin()">done</span>
+            </div>
+        </form>
+    </div>
+    <span class="spam"></span>
+    <script>
+        sessionStorage.getItem('loggedIn')? window.location = "/mainPage.html" : ""
+        console.log(loggedIn)
+    </script>
+    <script src="./scripts/background.js"></script>
+    <script src="./scripts/utils.js"></script>
+</body>
+</html>

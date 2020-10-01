@@ -1,0 +1,35 @@
+body {
+    box-sizing: border-box;
+    background: rgb(67, 69, 80);
+    font-family: 'Bahnschrift';
+    color: white;
+}
+
+.container {
+    width: 80vw;
+    margin: 5% auto 5% auto;
+    padding: 30px;
+    background: rgb(30, 30, 30);
+    border-radius: 20px;
+    box-shadow: 0 7px 14px 0px rgba(0, 0, 0, 0.212);
+}
+
+h2 {
+    text-align: center;
+}
+
+hr {
+    border: none;
+    height: 5px;
+    color: white;
+    background-color: white;
+}
+
+.goback-tnc {
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: inset 0 2px 4px 0px rgba(0, 0, 0, 0.5);
+}

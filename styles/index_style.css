@@ -1,0 +1,154 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Bahnschrift';
+    padding: 0;
+    margin: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+input[type="text"]{
+    width: 70%;
+    padding: 10px;
+    margin: 5px auto 5px auto;
+    border-radius: 10px;
+    border: none;
+}
+
+.landing-logo {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    font-size: 3em;
+    text-align: center;
+    color: #00f094;
+    z-index: 5;
+    margin-left: -50px;
+}
+
+.recognize-container {
+    color: white;
+    height: 100vh;
+    background: rgb(67, 69, 80);
+    display: flex;
+}
+
+.details-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    background: rgb(30, 30, 30);
+    width: 270px;
+    height: 300px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 7px 14px 0px rgba(0, 0, 0, 0.212);
+    z-index: 5;
+}
+
+.wave {
+    opacity: 1;
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    background: #292c2b;
+    width: 510px;
+    height: 490px;
+    margin-left: -250px;
+    margin-top: -250px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 3;
+}
+
+.wave.-two {
+    animation: drift 7000ms infinite linear;
+    opacity: .5;
+    background: #00f094;
+    z-index: 1;
+}
+
+.wave.-three {
+    animation: drift 6000ms infinite linear;
+    background: #522fa3;
+    opacity: .5;
+    z-index: 2;
+}
+
+.wave.-four {
+    animation: drift 8000ms infinite linear;
+    background: #ffffff;
+    opacity: 1;
+    z-index: 2;
+}
+
+.circle-landing {
+    background-color: #00f094;
+    border-radius: 50%;
+    animation: fade 2s ease-in-out forwards;
+}
+
+#landing {
+    display: flex;
+    justify-content: center;
+
+}
+
+#checkbox-landing {
+    margin: 15px 0 15px 0;
+    text-align: center;
+    font-weight: bold;
+    user-select: none;
+}
+
+#submit-landing {
+    background: rgb(30, 30, 30);
+    border: solid 3px #1eb980;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+}
+
+#submit-landing:hover {
+    background: #1eb980;
+    transition: background 350ms;
+}
+
+#submit-landing:hover #submit-icon {
+    color: black;
+}
+
+#submit-icon {
+    color: white;
+    padding: 15px;
+    margin: 0%;
+}
+
+#landing-bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;  
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0%;
+        transform: translate(-100px,-100px);
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes drift {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+  }
