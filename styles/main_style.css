@@ -1,0 +1,14 @@
+body {
+    background: #292c2b;
+}
+
+.landing-logo {
+    position: fixed;
+    top: calc(-4%);
+    left: calc(50vw - 100px);
+    width: 200px;
+    font-size: 3em;
+    text-align: center;
+    color: #00f094;
+    z-index: 7;
+}

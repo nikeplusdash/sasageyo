@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Neon Dove</title>
+    <link rel="stylesheet" href="./styles/main_style.css">
 </head>
 <body>
+    <div class="landing-logo">
+        <img id="land-logo" src="./styles/resource/LOGO.svg" alt="logo">
+    </div>
     <script>
-        sessionStorage.getItem('loggedIn') === null ? window.location = '/index.html' :""
-        let data = sessionStorage.getItem('userData')
+        sessionStorage.getItem('loggedIn') === null ? window.location = '/index.html' : ""
+        let data = JSON.parse(sessionStorage.getItem('userData'))
     </script>
 </body>
 </html>
