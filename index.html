@@ -21,23 +21,24 @@
         <div class="landing-logo">
             <img id="land-logo" src="./styles/resource/LOGO.svg" alt="logo">
         </div>
-        <form class="details-input" action="">
-            <input type="text" focus name="Name" placeholder="Full Name" id="name-input" oninput="this.setCustomValidity('')" required />
-            <input type="text" name="emailID" placeholder="Email ID" id="emailID-input" oninput="this.setCustomValidity('')" required />
-            <input type="text" name="planet" placeholder="Planet to be delivered" id="planet-input" oninput="this.setCustomValidity('')" required />
-            <div id="checkbox-landing">
-                <input type="checkbox" name="agreeTnC" id="agreeTnC-input" onclick="this.setCustomValidity('')" required />
-                <label for="agreeTnC-input">I agree to all <a href="/TnC.html">Terms and Conditions</a></label>
-            </div>
-            <div id="submit-landing">
-                <span id="submit-icon" class="material-icons" onClick="storeLogin()">done</span>
-            </div>
-        </form>
+        <div class="wrapper">
+            <form class="details-input" action="">
+                <input type="text" focus name="Name" placeholder="Full Name" id="name-input" oninput="this.setCustomValidity('')" required />
+                <input type="text" name="emailID" placeholder="Email ID" id="emailID-input" oninput="this.setCustomValidity('')" required />
+                <input type="text" name="planet" placeholder="Planet to be delivered" id="planet-input" oninput="this.setCustomValidity('')" required />
+                <div id="checkbox-landing">
+                    <input type="checkbox" name="agreeTnC" id="agreeTnC-input" onclick="this.setCustomValidity('')" required />
+                    <label for="agreeTnC-input">I agree to all <a href="/TnC.html">Terms and Conditions</a></label>
+                </div>
+                <div id="submit-landing">
+                    <span id="submit-icon" class="material-icons" onClick="storeLogin()">done</span>
+                </div>
+            </form>
+        </div>
     </div>
     <script>
         document.addEventListener('keydown',e => {
-            console.log(e)
-            if(e.key == "enter") storeLogin()
+            if(e.key == "Enter") storeLogin()
         })
         sessionStorage.getItem('loggedIn')?window.location = "/mainPage.html" : ""
     </script>

@@ -1,0 +1,200 @@
+body {
+    background: #292c2b;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Cascadia Mono';
+}
+
+.receipt {
+    background: white;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.render-data {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.render-data > img{
+    position: absolute;
+    height: 100%;
+}
+
+.data {
+    z-index: 1;
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-weight: bold;
+    font-size: x-large;
+    position: absolute;
+    top: 10%;
+}
+
+.dashed {
+    font-weight: bold;
+    font-size: x-large;
+    position: absolute;
+    top: 18%;
+}
+
+.dashed2 {
+    margin: 20px;
+}
+
+.insert-food {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 75%;
+    height: 70%;
+    top: 25%;
+    /* align-content: space-around; */
+    align-items: center;
+}
+
+.dish, .sub {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 8%;
+}
+
+.sub {
+    margin-top: 20px;
+    align-items: center;
+}
+
+.total {
+    position: relative;
+    left: 30%;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.sno {
+    display: block;
+    position: absolute;
+    left: 0%;
+}
+
+.name {
+    display: block;
+    position: absolute;
+    left: 20%;
+}
+
+.price {
+    display: block;
+    position: absolute;
+    right: 0%;
+    text-align: right;
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+}
+
+.landing-logo {
+    margin: auto;
+    width: 20vw;
+    font-size: 3em;
+    height: 15%;
+    position: absolute;
+    top: 3%;
+}
+
+#land-logo{
+    display: block;
+    height: 90%;
+    margin: 0 auto 0 auto;
+}
+
+.footer {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    padding: 5px;
+    justify-content: center;
+    background: black;
+    top: 5%;
+    left: 5%;
+    cursor: pointer;
+}
+
+.img {
+    transform:rotate(180deg)
+}
+
+@media (max-width: 800px) {
+    .render-data > img{
+        position: absolute;
+        width: 100%;
+    }    
+    .data {
+        width: 100%;
+        height: 80%;
+    }
+    .landing-logo {
+        width: 80vw;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+        transform: translate(0,10px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translate(0,0px);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+        transform: translate(0,0px);
+    }
+    100% {
+        opacity: 0%;
+        transform: translate(0,-10px);
+    }
+}
+
+@keyframes goRight {
+    0% {
+        transform: translate(0,0);
+    }
+    100% {
+        transform: translate(100vw,0);
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 350ms forwards ease-in-out;
+}
+
+.fadeOut {
+    animation: fadeOut 100ms forwards ease-in-out;
+}
+
+
+.goRight{
+    animation: goRight 350ms forwards ease-in-out;
+}

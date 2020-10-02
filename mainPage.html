@@ -3,16 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon Dove</title>
+    <meta name="description" content="Hungry? Neon Dove got you covered from drink to pizza to desserts">
+    <meta name="theme-color" content="black">
+    <title>The Neon Dove</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main_style.css">
 </head>
 <body>
+    <span class="spam fadeIn-two"></span>
     <div class="landing-logo">
-        <img id="land-logo" src="./styles/resource/LOGO.svg" alt="logo">
+        <a href="/mainPage.html"><img id="land-logo" src="./styles/resource/LOGO.svg" alt="logo"></a>
     </div>
+    <div class="selection-bar fadeIn">
+        <input class="" class="" onClick="refresh(this.id)" id="trending" type="button" value="">
+        <input class="" onClick="refresh(this.id)" id="salad" type="button" value="">
+        <input class="" onClick="refresh(this.id)" id="meal" type="button" value="">
+        <input class="" onClick="refresh(this.id)" id="mocktails" type="button" value="">
+    </div>
+    <div class="dummy-container">
+        <div class="detail-tab">
+            <h2 class="fadeIn-two menu first">
+            </h2>
+            <h5 class="fadeIn-two desc second"></h5>
+            <div class="wrapper">
+                <div class="dish-list">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer fadeIn" id="here" onClick="confirmPage(this.id)">
+        <img src="./styles//resource/local_grocery_store-24px.svg" alt="cart">
+    </div>
+    <script src="./scripts/background.js"></script>
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/scroll.js"></script>
     <script>
         sessionStorage.getItem('loggedIn') === null ? window.location = '/index.html' : ""
-        let data = JSON.parse(sessionStorage.getItem('userData'))
+        let userData = JSON.parse(sessionStorage.getItem('userData'))
+        document.querySelector('.menu.first').innerHTML = 'Hi ' + userData.Name.split(' ')[0] + ','
+        document.querySelector('.desc').innerHTML = 'What would you like to have today?'
     </script>
 </body>
 </html>

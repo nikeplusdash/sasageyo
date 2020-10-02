@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hungry? Neon Dove got you covered from drink to pizza to desserts">
+    <meta name="theme-color" content="black">
+    <title>The Neon Dove</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/checkout_style.css">
+</head>
+
+<body>
+    <div class="receipt">
+        <div class="render-data">
+            <img src="./styles/resource/Receipt.svg" alt="">
+            <div class="data">
+                <!-- <div class="title">NEON DOVE</div> -->
+                <div class="landing-logo fadeIn">
+                    <img id="land-logo" src="./styles/resource/LOGO-L.svg" alt="logo">
+                </div>
+                <div class="dashed">-------------------</div>
+                <div class="insert-food">
+                    <div class="dish">
+                        <div class="sno">Sr.No</div>
+                        <div class="name">Name</div>
+                        <div class="price">Price</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer fadeIn" id="here" onClick="backPage(this.id)">
+            <img class="img" src="./styles//resource/arrow_right_alt-24px.svg" alt="cart">
+        </div>
+    </div>
+    <script src="./scripts/utils.js"></script>
+    <script>
+        var rd = document.querySelector('.insert-food')
+        var data = sessionStorage.getItem('dataPresent') !== undefined ? JSON.parse(sessionStorage.getItem('data')) : null
+        var bought = []
+        for(const i in data) {
+            let k = data[i].dishes
+            for(const j in k) {
+                if(k[j].amount !== undefined && k[j].amount !== 0) bought.push(k[j])
+            }
+        }
+        order(bought)
+    </script>
+</body>
+
+</html>

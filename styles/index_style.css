@@ -59,20 +59,27 @@ form.submitted input[type="text"]:invalid{
 }
 
 .landing-logo {
-    position: fixed;
-    top: calc(-4%);
-    left: calc(50vw - 100px);
-    width: 200px;
+    width: 100vw;
     font-size: 3em;
-    text-align: center;
-    color: #00f094;
-    z-index: 7;
+    height: 15%;
+    position: relative;
+    z-index: 4;
+}
+
+#land-logo{
+    display: block;
+    height: 90%;
+    margin: 0 auto 0 auto;
 }
 
 .recognize-container {
     color: white;
     height: 100vh;
     background: rgb(226, 226, 226);
+}
+
+.wrapper {
+    height: 100%;
     display: flex;
 }
 

@@ -1,14 +1,365 @@
 body {
     background: #292c2b;
+    font-family: 'Bahnschrift';
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+}
+
+input[type="button"] {
+    position: relative;
+    margin: 0 20px 0 20px;
+    padding: 20px 30px;
+    background-color: #292c2b;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.452), -4px -4px 7px 0px rgba(78, 78, 78, 0.473);
+}
+
+.menu {
+    text-align: center;
+    opacity: 0;
+    font-size: 2em;
+    margin: 10px;
+}
+
+.desc {
+    opacity: 0;
+    text-align: center;
+    font-weight: 100;
+    margin: 10px;
+}
+
+.first {
+    color: white;
+    font-size: 3em !important;
+}
+
+.second {
+    color: white;
 }
 
 .landing-logo {
-    position: fixed;
-    top: calc(-4%);
-    left: calc(50vw - 100px);
-    width: 200px;
+    margin: auto;
+    width: 20vw;
     font-size: 3em;
-    text-align: center;
-    color: #00f094;
-    z-index: 7;
+    height: 15%;
+    position: relative;
+}
+
+#land-logo{
+    display: block;
+    height: 90%;
+    margin: 0 auto 0 auto;
+}
+
+.selection-bar {
+    display: flex;
+    position: relative;
+    width: 50vw;
+    height: auto;
+    justify-content: center;
+    margin: 20px auto 20px auto;
+    align-content: center;
+    animation: fadeIn 350ms forwards ease-in-out;
+}
+
+.dummy-container {
+    display: flex;
+    position: relative;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 30px 0;
+}
+
+.detail-tab {
+    background-color: #fffff0;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    display: block;
+    width: 85vw;
+    height: 0vh;
+    scroll-behavior: smooth;
+    transition: height 350ms ease-out;
+}
+
+.detail-tab.show {
+    height: 370px;
+}
+
+.wrapper {
+    display: flex;
+    overflow-x: auto;
+    width: 93%;
+    margin: auto;
+}
+
+.dish-list {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: auto;
+}
+
+.dish-list::-webkit-scrollbar {
+    display: none; 
+}
+
+
+.card {
+    width: 200px;
+    height: 250px;
+    flex: 0 0 auto;
+    display: block;
+    position: relative;
+    background-color: #292c2b;
+    border-radius: 20px;
+    margin: 10px 20px 10px 20px;
+    color: white;
+    box-shadow: 0 0 7px 0px rgba(41, 44, 43, 0.478);
+}
+
+.name {
+    position: absolute;
+    left: 8%;
+    bottom: 15%;
+    font-size: x-large;
+}
+
+.price {
+    position: absolute;
+    top: 5%;
+    left: 8%;
+}
+
+.serving {
+    position: absolute;
+    font-weight: 200;
+    left: 8.5%;
+    bottom: 5%;
+}
+
+.counter {
+    color: #292c2b;
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    right: 8%;
+}
+
+.count {
+    background-color: white;
+    padding: 2px 6px;
+}
+
+.count:hover {
+    background-color: #292c2b;
+    color: white;
+    padding: 2px 6px;
+    cursor: pointer;
+}
+
+.icon-sm {
+    background: white;
+    color: #292c2b;
+    box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.178);
+    border-radius: 3px;
+    padding: 2px 22px 2px 22px;
+}
+
+.plus {
+    background-color: white;
+    padding: 2px 6px;
+    border-radius: 0 3px 3px 0;
+}
+
+.minus {
+    background-color: white;
+    padding: 2px 6px;
+    border-radius: 3px 0 0 3px;
+}
+
+.plus:hover {
+    background-color: #00f094;
+}
+
+.minus:hover {
+    background-color: rgb(255, 52, 52);
+}
+
+.active {
+    box-shadow: inset 4px 4px 7px 0px rgba(0, 0, 0, 0.473),inset -4px -4px 7px 0px rgba(78, 78, 78, 0.466) !important;
+}
+
+.circle-landing {
+    display: inline-block;
+    background-color: #00f094;
+    border-radius: 50%;
+    animation: fade 2s ease-in-out forwards;
+}
+
+#trending {
+    background: url('./resource/trending.svg');
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-size: 40px;
+    background-position: 50%;
+}
+
+#salad {
+    background: url('./resource/salad.svg');
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-size: 40px;
+    background-position: 10px 7px;
+}
+
+#meal {
+    background: url('./resource/meal.svg');
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-size: 40px;
+    background-position: 11px 7px;
+}
+
+#mocktails {
+    background: url('./resource/mocktail.svg');
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-size: 40px;
+    background-position: 13px 8.5px;
+}
+
+.footer {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    padding: 5px;
+    justify-content: center;
+    background: white;
+    bottom: 5%;
+    right: 5%;
+}
+
+@media (max-width: 400px) {
+    .landing-logo {
+        width: 80vw;
+    }   
+    .selection-bar {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 90vw;
+        justify-content: center;
+        margin: 10px auto 10px auto;
+        align-content: center;
+        animation: fadeIn 350ms forwards ease-in-out;
+    }
+    input[type="button"] {
+        margin: 5px 5px 5px 5px;
+    }
+    .first {
+        color: white;
+        font-size: 2.5em !important;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 800px) {
+    .landing-logo {
+        width: 80vw;
+    }    
+    .selection-bar {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 90vw;
+        justify-content: center;
+        margin: 10px auto 10px auto;
+        align-content: center;
+        animation: fadeIn 350ms forwards ease-in-out;
+    }
+    input[type="button"] {
+        margin: 10px 10px 10px 10px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+        transform: translate(0,10px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translate(0,0px);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+        transform: translate(0,0px);
+    }
+    100% {
+        opacity: 0%;
+        transform: translate(0,-10px);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0%;
+        transform: translate(-100px,-100px);
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(500);
+    }
+}
+
+@keyframes diminish {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 350ms forwards ease-in-out;
+}
+
+.fadeIn-two {
+    animation: fadeIn 350ms forwards ease-in-out;
+    animation-delay: 350ms;
+}
+
+.fadeOut {
+    animation: fadeOut 100ms forwards ease-in-out;
+}
+
+.scaleUp{
+    animation: scaleUp 350ms forwards ease-in-out;
+}
+
+.diminish{
+    animation: diminish 350ms forwards ease-in-out;
+    animation-delay: 20ms;
 }
