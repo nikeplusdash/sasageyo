@@ -6,15 +6,15 @@
     <meta name="description" content="Hungry? Neon Dove got you covered from drink to pizza to desserts">
     <meta name="theme-color" content="black">
     <title>The Neon Dove</title>
-    <link rel="icon" href="/styles/resource/Logo-Dark.png"  media="(prefers-color-scheme:dark)">
-    <link rel="icon" href="/styles/resource/Logo-Light.png" media="(prefers-color-scheme:light)">
+    <link rel="icon" href="./styles/resource/Logo-Dark.png"  media="(prefers-color-scheme:dark)">
+    <link rel="icon" href="./styles/resource/Logo-Light.png" media="(prefers-color-scheme:light)">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main_style.css">
 </head>
 <body>
     <span class="spam fadeIn-two"></span>
     <div class="landing-logo">
-        <a href="/mainPage.html"><img id="land-logo" src="./styles/resource/LOGO.svg" alt="logo"></a>
+        <a href="{{ site.url }}/mainPage.html"><img id="land-logo" src="./styles/resource/LOGO.svg" alt="logo"></a>
     </div>
     <div class="selection-bar fadeIn">
         <input class="" class="" onClick="refresh(this.id)" id="trending" type="button" value="">
@@ -34,13 +34,13 @@
         </div>
     </div>
     <div class="footer fadeIn" id="here" onClick="confirmPage(this.id)">
-        <img src="./styles//resource/local_grocery_store-24px.svg" alt="cart">
+        <img src="./styles/resource/local_grocery_store-24px.svg" alt="cart">
     </div>
     <script src="./scripts/background.js"></script>
     <script src="./scripts/utils.js"></script>
     <script src="./scripts/scroll.js"></script>
     <script>
-        sessionStorage.getItem('loggedIn') === null ? window.location = './index.html' : ""
+        sessionStorage.getItem('loggedIn') === null ? window.location = '{{ site.url }}/index.html' : ""
         let userData = JSON.parse(sessionStorage.getItem('userData'))
         document.querySelector('.menu.first').innerHTML = 'Hi ' + userData.Name.split(' ')[0] + ','
         document.querySelector('.desc').innerHTML = 'What would you like to have today?'

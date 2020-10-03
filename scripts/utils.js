@@ -129,7 +129,7 @@ function storeLogin() {
         var exit_var = document.getElementsByClassName('wave')[0]
         exit_var.style.zIndex = 7
         exit_var.classList.add('scale-up')
-        exit_var.addEventListener('animationend',() => window.location = "/mainPage.html")
+        exit_var.addEventListener('animationend',() => window.location = "{{ site.url }}/mainPage.html")
     }
     else {
         document.forms[0].classList.add("submitted")
@@ -145,7 +145,7 @@ function confirmPage(id) {
     
     foot.addEventListener('animationend',() => foot.classList.add('scaleUp'))
     foot.addEventListener('animationend',() => {
-        window.location = '/checkout.html'
+        window.location = '{{ site.url }}/checkout.html'
     })
 }
 
@@ -154,7 +154,7 @@ function backPage(id) {
     rec.classList.add('goRight')
     rec.addEventListener('animationend',() => {
         rec.classList.add('goRight')
-        window.location = "/mainPage.html"
+        window.location = "{{ site.url }}/mainPage.html"
     })
 }
 
