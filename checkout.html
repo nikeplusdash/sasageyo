@@ -39,9 +39,7 @@
     </div>
     <script src="./scripts/utils.js"></script>
     <script>
-        // window.addEventListener('load',() => {
-            
-        // })
+        sessionStorage.getItem('loggedIn') === null ? window.location = './index.html' : ""
         setTimeout(function (){
             let paper = document.getElementById('rec')
             paper.style.position = 'absolute'
