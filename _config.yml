@@ -1,5 +1,5 @@
 url: https://nikeplusdash.github.io
-baseurl: net-root
+baseurl: /net-root
 
 relative_links:
   enabled: true
