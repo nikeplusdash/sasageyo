@@ -37,12 +37,20 @@
     </div>
     <script src="./scripts/utils.js"></script>
     <script>
-        if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
-            var img = document.querySelector('#rec')
-            var dataArea = document.querySelector('.data')
-            dataArea.style.width = img.width + 'px'
-            dataArea.style.height = img.height +'px'
-        }
+        // window.addEventListener('load',() => {
+            
+        // })
+        setTimeout(function (){
+            let paper = document.getElementById('rec')
+            paper.style.position = 'absolute'
+            paper.style.height = '100%'
+            if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+                var img = document.querySelector('#rec')
+                var dataArea = document.querySelector('.data')
+                dataArea.style.width = img.width + 'px'
+                dataArea.style.height = img.height +'px'
+            }
+        },0)
         var bought = []
         var data = sessionStorage.getItem('dataPresent') !== undefined ? JSON.parse(sessionStorage.getItem('data')) : null
         for(const i in data) {

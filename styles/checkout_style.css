@@ -34,6 +34,8 @@ html,body {
     z-index: 1;
     position: absolute;
     display: flex;
+    width: 30%;
+    height: 100%;
     justify-content: center;
 }
 

@@ -2,7 +2,7 @@ const line = (dish,cost) =>  {
     return `
     <div class="dish">
         <div class="sno">${dish.dish_id}</div>
-        <div class="name">${dish.name}</div>
+        <div class="name">${dish.name}(&#215;${dish.amount})</div>
         <div class="price">&#8377; ${cost}</div>
     </div>
     `
