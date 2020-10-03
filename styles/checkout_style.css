@@ -139,8 +139,8 @@ body::-webkit-scrollbar {
     padding: 5px;
     justify-content: center;
     background: black;
-    top: 5%;
-    left: 5%;
+    bottom: 5%;
+    right: 5%;
     cursor: pointer;
 }
 
@@ -154,7 +154,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     background: black;
     bottom: 5%;
-    right: 5%;
+    left: 5%;
     cursor: pointer;
 }
 
