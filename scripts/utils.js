@@ -16,6 +16,7 @@ const card = (dish,id,sno) => {
             <div class="count" onClick="handleClick(${dish.dish_id})">${dish.amount === undefined ? 0 : dish.amount}</div>
             <div class="plus" onClick="add(${dish.dish_id})">+</div>
         </div>
+        <img src="${dish.img}" class="foodpic fadeIn" onClick="handleClick(${dish.dish_id})">
         <div class="name">${dish.name}</div>
         <div class="serving">Serves: ${dish.serving}</div>
         <div class="price">&#8377; ${dish.price}</div>
@@ -28,12 +29,14 @@ const refresh = (id) => {
     if (box.classList.contains('show')) {
         let menu = document.getElementsByClassName('menu')[0]
         let lists = document.getElementsByClassName('card')
-        for (const i of lists) { i.classList.remove('fadeIn'); i.classList.add('fadeOut') }
-        menu.innerHTML = ""
-        menu.nextElementSibling.innerHTML = ""
-        document.getElementById(prev).classList.remove('active')
-        document.getElementById(id).classList.add('active')
-        prev = id
+        for (const i of lists) { i.classList.remove('fadeIn'); i.classList.add('fadeOut')}
+        setTimeout(() => {
+            menu.innerHTML = ""
+            menu.nextElementSibling.innerHTML = ""
+            document.getElementById(prev).classList.remove('active')
+            document.getElementById(id).classList.add('active')
+            prev = id
+        }, time_delay/1.5)
         box.classList.remove('show')
     }
     setTimeout(() => {
@@ -74,17 +77,19 @@ function handleClick(id) {
     let val = parseInt(list.children[1].innerHTML)
     let span = document.createElement('span')
     span.id = 'submit-icon'
-    span.textContent = 'OK'
+    span.textContent = 'ADDED'
     span.className = ''
     span.classList.add('icon-sm')
     // span.classList.add('material-icons')
     span.scrollLeft = pos.x
     span.scrollTop = pos.y
-    list.innerHTML = ''
+    span.style.position = 'absolute'
+    span.style.zIndex = 10
     list.appendChild(span)
     let sid = list.getAttribute('key')
     let sno = list.getAttribute('number')
     data[sid].dishes[sno]['amount'] = val
+    setTimeout(() => list.removeChild(span),2000)
 }
 
 function order(data) {
@@ -186,121 +191,223 @@ function getPosition(el) {
 
 var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getItem('data')):
 {
-    'salad': {
-        'description': 'Amazing green',
-        'dishes': [
-            {
-                'dish_id': '101',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
-            },
-            {
-                'dish_id': '102',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
-            },
-            {
-                'dish_id': '103',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
-            },
-            {
-                'dish_id': '102',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
-            },
-            {
-                'dish_id': '103',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
-            }
-        ]
-    },
     'trending': {
-        'description': 'Amazing green',
+        'description': 'Too hard to choose? We got you covered',
         'dishes': [
             {
-                'dish_id': '101',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
+                'dish_id': '406',
+                'name': 'Amul Lassi',
+                'price': '99',
+                'serving': '250ml',
+                'amount': 0,
+                'img': './styles/food/drinks/a-lassi.png'
             },
             {
-                'dish_id': '102',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
+                'dish_id': '204',
+                'name': "Cheese Slaw",
+                'price': '499',
+                'serving': '2',
+                'amount': 0,
+                'img': './styles/food/salad/cheese-slaw.png'
             },
             {
-                'dish_id': '103',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
+                'dish_id': '301',
+                'name': 'Penne Rosa',
+                'price': '749',
+                'serving': '1',
+                'amount': 0,
+                'img': './styles/food/meal/penne-rosa.png'
+            },
+            {
+                'dish_id': '202',
+                'name': "Bok l'hong",
+                'price': '349',
+                'serving': '2',
+                'amount': 0,
+                'img': './styles/food/salad/bok-lahong.png'
+            },
+            {
+                'dish_id': '301',
+                'name': 'Chick-n-Wings',
+                'price': '649',
+                'serving': '4',
+                'amount': 0,
+                'img': './styles/food/meal/meal.png'
             }
         ]
     },
-    'mocktails': {
-        'description': 'Amazing green',
+    'salad': {
+        'description': 'The perfect dressing is essential to the perfect salad.',
         'dishes': [
             {
-                'dish_id': '101',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
+                'dish_id': '201',
+                'name': 'Caesar Salad',
+                'price': '349',
+                'serving': '1',
+                'amount': 0,
+                'img': './styles/food/salad/caesar-salad.png'
             },
             {
-                'dish_id': '102',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
+                'dish_id': '202',
+                'name': "Bok l'hong",
+                'price': '349',
+                'serving': '2',
+                'amount': 0,
+                'img': './styles/food/salad/bok-lahong.png'
             },
             {
-                'dish_id': '103',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
+                'dish_id': '203',
+                'name': "Masclun",
+                'price': '499',
+                'serving': '1',
+                'amount': 0,
+                'img': './styles/food/salad/masclun-salad.png'
+            },
+            {
+                'dish_id': '204',
+                'name': "Cheese Slaw",
+                'price': '499',
+                'serving': '2',
+                'amount': 0,
+                'img': './styles/food/salad/cheese-slaw.png'
+            },
+            {
+                'dish_id': '205',
+                'name': "Panzanella",
+                'price': '549',
+                'serving': '2',
+                'amount': 0,
+                'img': './styles/food/salad/panzanella.png'
+            },
+            {
+                'dish_id': '206',
+                'name': "Vinegret",
+                'price': '349',
+                'serving': '1',
+                'amount': 0,
+                'img': './styles/food/salad/vinegret.png'
+            },
+            {
+                'dish_id': '207',
+                'name': "7-Layer Salad",
+                'price': '699',
+                'serving': '4',
+                'amount': 0,
+                'img': './styles/food/salad/7-layer.png'
             }
         ]
     },
     'meal': {
-        'description': 'Amazing green',
+        'description': 'Nothing brings people together like good food',
         'dishes': [
             {
-                'dish_id': '101',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
+                'dish_id': '301',
+                'name': 'Chick-n-Wings',
+                'price': '649',
+                'serving': '4',
+                'amount': 0,
+                'img': './styles/food/meal/meal.png'
             },
             {
-                'dish_id': '102',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
+                'dish_id': '302',
+                'name': 'Penne Rosa',
+                'price': '749',
+                'serving': '1',
+                'amount': 0,
+                'img': './styles/food/meal/penne-rosa.png'
             },
             {
-                'dish_id': '103',
-                'name': 'Bean Burrito',
-                'price': '149',
-                'serving': '1-2',
-                'img': ''
+                'dish_id': '303',
+                'name': 'Pack 1',
+                'price': '449',
+                'serving': '1',
+                'amount': 0,
+                'img': './styles/food/meal/bm-1.png'
+            },
+            {
+                'dish_id': '304',
+                'name': 'Pack 2',
+                'price': '449',
+                'serving': '1',
+                'amount': 0,
+                'img': './styles/food/meal/bm-2.png'
+            },
+            {
+                'dish_id': '305',
+                'name': 'Pack 3',
+                'price': '449',
+                'serving': '1',
+                'amount': 0,
+                'img': './styles/food/meal/bm-3.png'
+            },
+            {
+                'dish_id': '306',
+                'name': 'Pack 4',
+                'price': '449',
+                'serving': '1',
+                'amount': 0,
+                'img': './styles/food/meal/bm-4.png'
+            },
+            {
+                'dish_id': '307',
+                'name': 'Pack 5',
+                'price': '449',
+                'serving': '1',
+                'amount': 0,
+                'img': './styles/food/meal/bm-5.png'
+            }
+        ]
+    },
+    'drinks': {
+        'description': 'Life is a crazy mixture of intoxicating drinks',
+        'dishes': [
+            {
+                'dish_id': '401',
+                'name': 'Shirley Temple',
+                'price': '599',
+                'serving': '500ml',
+                'amount': 0,
+                'img': './styles/food/drinks/shirley-temple.png'
+            },
+            {
+                'dish_id': '402',
+                'name': 'Egg Nog',
+                'price': '349',
+                'serving': '250ml',
+                'amount': 0,
+                'img': './styles/food/drinks/egg-nog.png'
+            },
+            {
+                'dish_id': '403',
+                'name': 'Coca Cola',
+                'price': '599',
+                'serving': '500ml',
+                'amount': 0,
+                'img': './styles/food/drinks/cc-pic.png'
+            },
+            {
+                'dish_id': '404',
+                'name': 'Sprite',
+                'price': '599',
+                'serving': '500ml',
+                'amount': 0,
+                'img': './styles/food/drinks/sprite-d.png'
+            },
+            {
+                'dish_id': '405',
+                'name': 'Mystic Water',
+                'price': '399',
+                'serving': '1l',
+                'amount': 0,
+                'img': './styles/food/drinks/sparkle-water.png'
+            },
+            {
+                'dish_id': '406',
+                'name': 'Amul Lassi',
+                'price': '99',
+                'serving': '250ml',
+                'amount': 0,
+                'img': './styles/food/drinks/a-lassi.png'
             }
         ]
     }

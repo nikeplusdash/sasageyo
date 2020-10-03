@@ -143,7 +143,7 @@ body::-webkit-scrollbar {
     transform:rotate(180deg)
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .render-data > img{
         position: absolute;
         width: 100%;

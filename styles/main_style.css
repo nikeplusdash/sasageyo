@@ -92,7 +92,7 @@ input[type="button"] {
 }
 
 .detail-tab.show {
-    height: 370px;
+    height: 390px;
 }
 
 .wrapper {
@@ -104,7 +104,9 @@ input[type="button"] {
 
 .dish-list {
     display: flex;
+    width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
     scrollbar-width: none;
     margin: auto;
 }
@@ -113,30 +115,32 @@ input[type="button"] {
     display: none; 
 }
 
-
 .card {
     width: 200px;
-    height: 250px;
+    height: 255px;
     flex: 0 0 auto;
     display: block;
     position: relative;
     background-color: #292c2b;
     border-radius: 20px;
-    margin: 10px 20px 10px 20px;
+    margin: 10px 20px 25px 20px;
     color: white;
     box-shadow: 0 0 7px 0px rgba(41, 44, 43, 0.478);
+    user-select: none;
 }
 
 .name {
     position: absolute;
+    top: 5%;
     left: 8%;
-    bottom: 15%;
+    width: 85%;
+    word-wrap: normal;
     font-size: x-large;
 }
 
 .price {
     position: absolute;
-    top: 5%;
+    top: 25%;
     left: 8%;
 }
 
@@ -144,15 +148,24 @@ input[type="button"] {
     position: absolute;
     font-weight: 200;
     left: 8.5%;
-    bottom: 5%;
+    top: 17%;
 }
 
 .counter {
     color: #292c2b;
     display: flex;
     position: absolute;
-    bottom: 5%;
+    top: 16.5%;
     right: 8%;
+}
+
+.foodpic {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: -13%;
+    right: -20%;
+    cursor: pointer;
 }
 
 .count {
@@ -168,23 +181,26 @@ input[type="button"] {
 }
 
 .icon-sm {
-    background: white;
-    color: #292c2b;
+    background: #00f094;
+    color: #000000;
     box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.178);
     border-radius: 3px;
-    padding: 2px 22px 2px 22px;
+    text-align: center;
+    padding: 2px 5px 2px 5px;
 }
 
 .plus {
     background-color: white;
     padding: 2px 6px;
     border-radius: 0 3px 3px 0;
+    cursor: pointer;
 }
 
 .minus {
     background-color: white;
     padding: 2px 6px;
     border-radius: 3px 0 0 3px;
+    cursor: pointer;
 }
 
 .plus:hover {
@@ -204,6 +220,18 @@ input[type="button"] {
     background-color: #00f094;
     border-radius: 50%;
     animation: fade 2s ease-in-out forwards;
+    user-select: none;
+}
+
+.bottom-text {
+    /* display: block; */
+    width: 100vw;
+    height: 20px;
+    text-align: center;
+    color: #00f094;
+    z-index: 1;
+    position: absolute;
+    bottom: 2%;
 }
 
 #trending {
@@ -227,8 +255,8 @@ input[type="button"] {
     background-position: 11px 7px;
 }
 
-#mocktails {
-    background: url('./resource/mocktail.svg');
+#drinks {
+    background: url('./resource/drinks.svg');
     background-repeat: no-repeat;  /* make the background image appear only once */
     background-size: 40px;
     background-position: 13px 8.5px;
@@ -245,6 +273,7 @@ input[type="button"] {
     background: white;
     bottom: 5%;
     right: 5%;
+    z-index: 3;
 }
 
 @media (max-width: 400px) {
@@ -352,7 +381,7 @@ input[type="button"] {
 }
 
 .fadeOut {
-    animation: fadeOut 100ms forwards ease-in-out;
+    animation: fadeOut 80ms forwards ease-in-out;
 }
 
 .scaleUp{
