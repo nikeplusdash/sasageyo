@@ -40,7 +40,7 @@
     <script src="./scripts/utils.js"></script>
     <script src="./scripts/scroll.js"></script>
     <script>
-        sessionStorage.getItem('loggedIn') === null ? window.location = '{{ site.url }}/index.html' : ""
+        sessionStorage.getItem('loggedIn') === null ? window.location = './index.html' : ""
         let userData = JSON.parse(sessionStorage.getItem('userData'))
         document.querySelector('.menu.first').innerHTML = 'Hi ' + userData.Name.split(' ')[0] + ','
         document.querySelector('.desc').innerHTML = 'What would you like to have today?'
