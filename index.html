@@ -6,6 +6,8 @@
     <meta name="description" content="Hungry? Neon Dove got you covered from drink to pizza to desserts">
     <meta name="theme-color" content="black">
     <title>The Neon Dove</title>
+    <link rel="icon" href="/styles/resource/Logo-Dark.png"  media="(prefers-color-scheme:dark)">
+    <link rel="icon" href="/styles/resource/Logo-Light.png" media="(prefers-color-scheme:light)">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles/index_style.css">
 </head>
@@ -40,7 +42,7 @@
         document.addEventListener('keydown',e => {
             if(e.key == "Enter") storeLogin()
         })
-        sessionStorage.getItem('loggedIn')?window.location = "/mainPage.html" : ""
+        sessionStorage.getItem('loggedIn')?window.location = "./mainPage.html" : ""
     </script>
     <script src="./scripts/background.js"></script>
     <script src="./scripts/utils.js"></script>

@@ -6,6 +6,8 @@
     <meta name="description" content="Hungry? Neon Dove got you covered from drink to pizza to desserts">
     <meta name="theme-color" content="black">
     <title>The Neon Dove</title>
+    <link rel="icon" href="/styles/resource/Logo-Dark.png"  media="(prefers-color-scheme:dark)">
+    <link rel="icon" href="/styles/resource/Logo-Light.png" media="(prefers-color-scheme:light)">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main_style.css">
 </head>
@@ -38,7 +40,7 @@
     <script src="./scripts/utils.js"></script>
     <script src="./scripts/scroll.js"></script>
     <script>
-        sessionStorage.getItem('loggedIn') === null ? window.location = '/index.html' : ""
+        sessionStorage.getItem('loggedIn') === null ? window.location = './index.html' : ""
         let userData = JSON.parse(sessionStorage.getItem('userData'))
         document.querySelector('.menu.first').innerHTML = 'Hi ' + userData.Name.split(' ')[0] + ','
         document.querySelector('.desc').innerHTML = 'What would you like to have today?'

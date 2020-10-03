@@ -130,7 +130,7 @@ function storeLogin() {
         var exit_var = document.getElementsByClassName('wave')[0]
         exit_var.style.zIndex = 7
         exit_var.classList.add('scale-up')
-        setTimeout(() => window.location = "/mainPage.html", 950)
+        setTimeout(() => window.location = "./mainPage.html", 950)
     }
     else {
         document.forms[0].classList.add("submitted")
@@ -145,13 +145,13 @@ function confirmPage(id) {
     foot.children[0].classList.add('diminish')
     setTimeout(() => {
         foot.classList.add('scaleUp')
-        window.location = '/Checkout.html'
+        window.location = './checkout.html'
     },400)
 }
 
 function backPage(id) {
     document.getElementsByClassName('receipt')[0].classList.add('goRight')
-    setTimeout(() => window.location = "/mainPage.html", 320)
+    setTimeout(() => window.location = "./mainPage.html", 320)
 }
 
 function getPosition(el) {
