@@ -211,7 +211,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'img': './styles/food/salad/cheese-slaw.png'
             },
             {
-                'dish_id': '301',
+                'dish_id': '302',
                 'name': 'Penne Rosa',
                 'price': '749',
                 'serving': '1',
