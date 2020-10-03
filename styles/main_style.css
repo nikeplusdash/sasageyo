@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Bahnschrift";
+    src: url('./bahnschrift.ttf');
+}
+
 body {
     background: #292c2b;
     font-family: 'Bahnschrift';
@@ -230,7 +235,7 @@ input[type="button"] {
     text-align: center;
     color: #00f094;
     z-index: 1;
-    position: absolute;
+    position: fixed;
     bottom: 2%;
 }
 
@@ -265,7 +270,7 @@ input[type="button"] {
 .footer {
     width: 40px;
     height: 40px;
-    position: absolute;
+    position: fixed;
     display: flex;
     border-radius: 50%;
     padding: 5px;
@@ -286,7 +291,7 @@ input[type="button"] {
         position: relative;
         width: 90vw;
         justify-content: center;
-        margin: 10px auto 10px auto;
+        margin: 5px auto 5px auto;
         align-content: center;
         animation: fadeIn 350ms forwards ease-in-out;
     }
@@ -296,6 +301,14 @@ input[type="button"] {
     .first {
         color: white;
         font-size: 2.5em !important;
+    }
+    .dummy-container {
+        display: flex;
+        position: relative;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0 30px 0;
     }
 }
 

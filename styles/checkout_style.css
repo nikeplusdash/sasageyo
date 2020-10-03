@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Cascadia Mono";
+    src: url('./CascadiaMono.woff2');
+}
+
 html,body {
     background: #292c2b;
     padding: 0;
@@ -128,7 +133,7 @@ body::-webkit-scrollbar {
 .footer {
     width: 40px;
     height: 40px;
-    position: absolute;
+    position: fixed;
     display: flex;
     border-radius: 50%;
     padding: 5px;
@@ -136,6 +141,20 @@ body::-webkit-scrollbar {
     background: black;
     top: 5%;
     left: 5%;
+    cursor: pointer;
+}
+
+.download {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    display: flex;
+    border-radius: 50%;
+    padding: 5px;
+    justify-content: center;
+    background: black;
+    bottom: 5%;
+    right: 5%;
     cursor: pointer;
 }
 

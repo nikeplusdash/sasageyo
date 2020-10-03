@@ -1,7 +1,12 @@
+@font-face {
+    font-family: "Cascadia Mono";
+    src: url('./CascadiaMono.woff2');
+}
+
 body {
     box-sizing: border-box;
     background: rgb(226, 226, 226);
-    font-family: 'Bahnschrift';
+    font-family: 'Cascadia Mono';
     color: white;
 }
 
