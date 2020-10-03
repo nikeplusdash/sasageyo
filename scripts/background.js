@@ -14,7 +14,7 @@ function genCircle() {
     span.style.top = H
     span.style.left = W
     canva.appendChild(span)
-    setTimeout(()=> canva.removeChild(span),1700)
+    span.addEventListener('animationend',()=> canva.removeChild(span))
 }
 
 setInterval(()=> genCircle(),150)

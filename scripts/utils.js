@@ -23,9 +23,9 @@ const card = (dish,id,sno) => {
 }
 
 const refresh = (id) => {
-    if (prev === null) prev = id
-    if (prev === id) { document.getElementById(id).classList.add('active'); }
-    else if (box.classList.contains('show')) {
+    if (prev === null) {prev = id;document.getElementById(id).classList.add('active');}
+    else if (prev === id) {return}
+    if (box.classList.contains('show')) {
         let menu = document.getElementsByClassName('menu')[0]
         let lists = document.getElementsByClassName('card')
         for (const i of lists) { i.classList.remove('fadeIn'); i.classList.add('fadeOut') }
@@ -88,7 +88,6 @@ function handleClick(id) {
 }
 
 function order(data) {
-    console.log(data);
     let input = document.querySelector('.insert-food')
     let total = 0
     for(const i in data) {
@@ -130,7 +129,7 @@ function storeLogin() {
         var exit_var = document.getElementsByClassName('wave')[0]
         exit_var.style.zIndex = 7
         exit_var.classList.add('scale-up')
-        setTimeout(() => window.location = "./mainPage.html", 950)
+        exit_var.addEventListener('animationend',() => window.location = "net-work/mainPage.html")
     }
     else {
         document.forms[0].classList.add("submitted")
@@ -143,15 +142,20 @@ function confirmPage(id) {
     sessionStorage.setItem('data',JSON.stringify(data))
     let foot = document.getElementById(id)
     foot.children[0].classList.add('diminish')
-    setTimeout(() => {
-        foot.classList.add('scaleUp')
-        window.location = './checkout.html'
-    },400)
+    
+    foot.addEventListener('animationend',() => foot.classList.add('scaleUp'))
+    foot.addEventListener('animationend',() => {
+        window.location = 'net-work/checkout.html'
+    })
 }
 
 function backPage(id) {
-    document.getElementsByClassName('receipt')[0].classList.add('goRight')
-    setTimeout(() => window.location = "./mainPage.html", 320)
+    let rec = document.querySelector('.receipt')
+    rec.classList.add('goRight')
+    rec.addEventListener('animationend',() => {
+        rec.classList.add('goRight')
+        window.location = "net-work/mainPage.html"
+    })
 }
 
 function getPosition(el) {

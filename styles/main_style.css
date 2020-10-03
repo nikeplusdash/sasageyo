@@ -348,7 +348,7 @@ input[type="button"] {
 
 .fadeIn-two {
     animation: fadeIn 350ms forwards ease-in-out;
-    animation-delay: 350ms;
+    animation-delay: 100ms;
 }
 
 .fadeOut {

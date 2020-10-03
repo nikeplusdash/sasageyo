@@ -1,7 +1,8 @@
-body {
+html,body {
     background: #292c2b;
     padding: 0;
     margin: 0;
+    width: 100vw;
     height: 100vh;
     font-family: 'Cascadia Mono';
 }
@@ -11,6 +12,7 @@ body {
     padding: 0;
     margin: 0;
     height: 100vh;
+    width: 100vw;
 }
 
 .render-data {
@@ -31,8 +33,6 @@ body {
 .data {
     z-index: 1;
     position: absolute;
-    width: 60%;
-    height: 100%;
     display: flex;
     justify-content: center;
 }
@@ -147,8 +147,9 @@ body::-webkit-scrollbar {
         width: 100%;
     }    
     .data {
-        width: 100%;
-        height: 80%;
+        position: relative;
+        width: 100% !important;
+        height: 80% !important;
     }
     .landing-logo {
         width: 80vw;

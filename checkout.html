@@ -16,13 +16,12 @@
 <body>
     <div class="receipt">
         <div class="render-data">
-            <img src="./styles/resource/Receipt.svg" alt="">
-            <div class="data">
-                <!-- <div class="title">NEON DOVE</div> -->
-                <div class="landing-logo fadeIn">
+            <img id="rec" Src="./styles/resource/Receipt.svg" alt="Receipt">
+            <div class="data fadeIn">
+                <div class="landing-logo ">
                     <img id="land-logo" src="./styles/resource/LOGO-L.svg" alt="logo">
                 </div>
-                <div class="dashed">-------------------</div>
+                <div class="dashed">-------------</div>
                 <div class="insert-food">
                     <div class="dish">
                         <div class="sno">Sr.No</div>
@@ -38,9 +37,14 @@
     </div>
     <script src="./scripts/utils.js"></script>
     <script>
-        var rd = document.querySelector('.insert-food')
-        var data = sessionStorage.getItem('dataPresent') !== undefined ? JSON.parse(sessionStorage.getItem('data')) : null
+        if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+            var img = document.querySelector('#rec')
+            var dataArea = document.querySelector('.data')
+            dataArea.style.width = img.width + 'px'
+            dataArea.style.height = img.height +'px'
+        }
         var bought = []
+        var data = sessionStorage.getItem('dataPresent') !== undefined ? JSON.parse(sessionStorage.getItem('data')) : null
         for(const i in data) {
             let k = data[i].dishes
             for(const j in k) {
