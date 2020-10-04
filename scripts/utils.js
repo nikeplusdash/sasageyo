@@ -111,7 +111,7 @@ function order(data) {
 function storeLogin() {
     let pattern1 = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i)
     let pattern2 = new RegExp(/^[a-zA-Z]+ [a-zA-Z]+$/)
-    let isEarth = /(earth)\s*([0-9]*)/
+    let isEarth = /(earth)\s*([a-zA-Z0-9]*)/
     var form = document.getElementsByClassName('details-input')[0].elements
     var name = form[0].value || null
     var email = form[1].value || null
@@ -134,7 +134,7 @@ function storeLogin() {
         var exit_var = document.getElementsByClassName('wave')[0]
         exit_var.style.zIndex = 7
         exit_var.classList.add('scale-up')
-        exit_var.addEventListener('animationend',() => window.location = "./mainPage.html")
+        exit_var.addEventListener('animationend',() => window.location = "mainPage.html")
     }
     else {
         document.forms[0].classList.add("submitted")
@@ -150,7 +150,7 @@ function confirmPage(id) {
     
     foot.addEventListener('animationend',() => foot.classList.add('scaleUp'))
     foot.addEventListener('animationend',() => {
-        window.location = './checkout.html'
+        window.location = 'checkout.html'
     })
 }
 
@@ -159,7 +159,7 @@ function backPage(id) {
     rec.classList.add('goRight')
     rec.addEventListener('animationend',() => {
         rec.classList.add('goRight')
-        window.location = "./mainPage.html"
+        window.location = "mainPage.html"
     })
 }
 
@@ -200,7 +200,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '99',
                 'serving': '250ml',
                 'amount': 0,
-                'img': './styles/food/drinks/a-lassi.png'
+                'img': 'styles/food/drinks/a-lassi.png'
             },
             {
                 'dish_id': '204',
@@ -208,7 +208,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '499',
                 'serving': '2',
                 'amount': 0,
-                'img': './styles/food/salad/cheese-slaw.png'
+                'img': 'styles/food/salad/cheese-slaw.png'
             },
             {
                 'dish_id': '302',
@@ -216,7 +216,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '749',
                 'serving': '1',
                 'amount': 0,
-                'img': './styles/food/meal/penne-rosa.png'
+                'img': 'styles/food/meal/penne-rosa.png'
             },
             {
                 'dish_id': '202',
@@ -224,7 +224,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '349',
                 'serving': '2',
                 'amount': 0,
-                'img': './styles/food/salad/bok-lahong.png'
+                'img': 'styles/food/salad/bok-lahong.png'
             },
             {
                 'dish_id': '301',
@@ -232,7 +232,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '649',
                 'serving': '4',
                 'amount': 0,
-                'img': './styles/food/meal/meal.png'
+                'img': 'styles/food/meal/meal.png'
             }
         ]
     },
@@ -245,7 +245,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '349',
                 'serving': '1',
                 'amount': 0,
-                'img': './styles/food/salad/caesar-salad.png'
+                'img': 'styles/food/salad/caesar-salad.png'
             },
             {
                 'dish_id': '202',
@@ -253,7 +253,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '349',
                 'serving': '2',
                 'amount': 0,
-                'img': './styles/food/salad/bok-lahong.png'
+                'img': 'styles/food/salad/bok-lahong.png'
             },
             {
                 'dish_id': '203',
@@ -261,7 +261,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '499',
                 'serving': '1',
                 'amount': 0,
-                'img': './styles/food/salad/masclun-salad.png'
+                'img': 'styles/food/salad/masclun-salad.png'
             },
             {
                 'dish_id': '204',
@@ -269,7 +269,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '499',
                 'serving': '2',
                 'amount': 0,
-                'img': './styles/food/salad/cheese-slaw.png'
+                'img': 'styles/food/salad/cheese-slaw.png'
             },
             {
                 'dish_id': '205',
@@ -277,7 +277,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '549',
                 'serving': '2',
                 'amount': 0,
-                'img': './styles/food/salad/panzanella.png'
+                'img': 'styles/food/salad/panzanella.png'
             },
             {
                 'dish_id': '206',
@@ -285,7 +285,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '349',
                 'serving': '1',
                 'amount': 0,
-                'img': './styles/food/salad/vinegret.png'
+                'img': 'styles/food/salad/vinegret.png'
             },
             {
                 'dish_id': '207',
@@ -293,7 +293,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '699',
                 'serving': '4',
                 'amount': 0,
-                'img': './styles/food/salad/7-layer.png'
+                'img': 'styles/food/salad/7-layer.png'
             }
         ]
     },
@@ -306,7 +306,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '649',
                 'serving': '4',
                 'amount': 0,
-                'img': './styles/food/meal/meal.png'
+                'img': 'styles/food/meal/meal.png'
             },
             {
                 'dish_id': '302',
@@ -314,7 +314,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '749',
                 'serving': '1',
                 'amount': 0,
-                'img': './styles/food/meal/penne-rosa.png'
+                'img': 'styles/food/meal/penne-rosa.png'
             },
             {
                 'dish_id': '303',
@@ -322,7 +322,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '449',
                 'serving': '1',
                 'amount': 0,
-                'img': './styles/food/meal/bm-1.png'
+                'img': 'styles/food/meal/bm-1.png'
             },
             {
                 'dish_id': '304',
@@ -330,7 +330,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '449',
                 'serving': '1',
                 'amount': 0,
-                'img': './styles/food/meal/bm-2.png'
+                'img': 'styles/food/meal/bm-2.png'
             },
             {
                 'dish_id': '305',
@@ -338,7 +338,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '449',
                 'serving': '1',
                 'amount': 0,
-                'img': './styles/food/meal/bm-3.png'
+                'img': 'styles/food/meal/bm-3.png'
             },
             {
                 'dish_id': '306',
@@ -346,7 +346,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '449',
                 'serving': '1',
                 'amount': 0,
-                'img': './styles/food/meal/bm-4.png'
+                'img': 'styles/food/meal/bm-4.png'
             },
             {
                 'dish_id': '307',
@@ -354,7 +354,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '449',
                 'serving': '1',
                 'amount': 0,
-                'img': './styles/food/meal/bm-5.png'
+                'img': 'styles/food/meal/bm-5.png'
             }
         ]
     },
@@ -367,7 +367,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '599',
                 'serving': '500ml',
                 'amount': 0,
-                'img': './styles/food/drinks/shirley-temple.png'
+                'img': 'styles/food/drinks/shirley-temple.png'
             },
             {
                 'dish_id': '402',
@@ -375,7 +375,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '349',
                 'serving': '250ml',
                 'amount': 0,
-                'img': './styles/food/drinks/egg-nog.png'
+                'img': 'styles/food/drinks/egg-nog.png'
             },
             {
                 'dish_id': '403',
@@ -383,7 +383,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '599',
                 'serving': '500ml',
                 'amount': 0,
-                'img': './styles/food/drinks/cc-pic.png'
+                'img': 'styles/food/drinks/cc-pic.png'
             },
             {
                 'dish_id': '404',
@@ -391,7 +391,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '599',
                 'serving': '500ml',
                 'amount': 0,
-                'img': './styles/food/drinks/sprite-d.png'
+                'img': 'styles/food/drinks/sprite-d.png'
             },
             {
                 'dish_id': '405',
@@ -399,7 +399,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '399',
                 'serving': '1l',
                 'amount': 0,
-                'img': './styles/food/drinks/sparkle-water.png'
+                'img': 'styles/food/drinks/sparkle-water.png'
             },
             {
                 'dish_id': '406',
@@ -407,7 +407,7 @@ var data = sessionStorage.getItem('dataPresent')?JSON.parse(sessionStorage.getIt
                 'price': '99',
                 'serving': '250ml',
                 'amount': 0,
-                'img': './styles/food/drinks/a-lassi.png'
+                'img': 'styles/food/drinks/a-lassi.png'
             }
         ]
     }

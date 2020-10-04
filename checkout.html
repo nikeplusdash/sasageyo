@@ -7,18 +7,18 @@
     <meta name="description" content="Hungry? Neon Dove got you covered from drink to pizza to desserts">
     <meta name="theme-color" content="black">
     <title>The Neon Dove</title>
-    <link rel="icon" href="./styles/resource/Logo-Dark.png"  media="(prefers-color-scheme:dark)">
-    <link rel="icon" href="./styles/resource/Logo-Light.png" media="(prefers-color-scheme:light)">
-    <link rel="stylesheet" href="./styles/checkout_style.css">
+    <link rel="icon" href="styles/resource/Logo-Dark.png"  media="(prefers-color-scheme:dark)">
+    <link rel="icon" href="styles/resource/Logo-Light.png" media="(prefers-color-scheme:light)">
+    <link rel="stylesheet" href="styles/checkout_style.css">
 </head>
 
 <body>
     <div class="receipt">
         <div class="render-data">
-            <img id="rec" src="./styles/resource/Receipt.svg" alt="Receipt">
+            <img id="rec" src="styles/resource/Receipt.svg" alt="Receipt">
             <div class="data fadeIn">
                 <div class="landing-logo ">
-                    <img id="land-logo" src="./styles/resource/LOGO-L.svg" alt="logo">
+                    <img id="land-logo" src="styles/resource/LOGO-L.svg" alt="logo">
                 </div>
                 <div class="dashed">-------------</div>
                 <div class="insert-food">
@@ -31,15 +31,15 @@
             </div>
         </div>
         <div class="footer fadeIn" id="here" onClick="backPage(this.id)">
-            <img class="img" src="./styles/resource/arrow_right_alt-24px.svg" alt="cart">
+            <img class="img" src="styles/resource/arrow_right_alt-24px.svg" alt="cart">
         </div>
         <!-- <div class="download fadeIn" id="dl" onClick="download(this.id)">
-            <img class="img2" src="./styles/resource/get_app-black-24dp.svg" alt="download">
+            <img class="img2" src="styles/resource/get_app-black-24dp.svg" alt="download">
         </div> -->
     </div>
-    <script src="./scripts/utils.js"></script>
+    <script src="scripts/utils.js"></script>
     <script>
-        sessionStorage.getItem('loggedIn') === null ? window.location = './index.html' : ""
+        sessionStorage.getItem('loggedIn') === null ? window.location = 'index.html' : ""
         setTimeout(function (){
             let paper = document.getElementById('rec')
             paper.style.position = 'absolute'

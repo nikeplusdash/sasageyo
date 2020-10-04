@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Bahnschrift";
-    src: url('./bahnschrift.ttf');
+    src: url('bahnschrift.ttf');
 }
 
 body {
@@ -113,6 +113,7 @@ input[type="button"] {
     overflow-x: auto;
     overflow-y: hidden;
     scrollbar-width: none;
+    -ms-overflow-style: none; 
     margin: auto;
 }
 
@@ -240,28 +241,28 @@ input[type="button"] {
 }
 
 #trending {
-    background: url('./resource/trending.svg');
+    background: url('resource/trending.svg');
     background-repeat: no-repeat;  /* make the background image appear only once */
     background-size: 40px;
     background-position: 50%;
 }
 
 #salad {
-    background: url('./resource/salad.svg');
+    background: url('resource/salad.svg');
     background-repeat: no-repeat;  /* make the background image appear only once */
     background-size: 40px;
     background-position: 10px 7px;
 }
 
 #meal {
-    background: url('./resource/meal.svg');
+    background: url('resource/meal.svg');
     background-repeat: no-repeat;  /* make the background image appear only once */
     background-size: 40px;
     background-position: 11px 7px;
 }
 
 #drinks {
-    background: url('./resource/drinks.svg');
+    background: url('resource/drinks.svg');
     background-repeat: no-repeat;  /* make the background image appear only once */
     background-size: 40px;
     background-position: 13px 8.5px;
