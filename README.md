@@ -1,12 +1,11 @@
 # Neon-Dove
 
-<center><a target="_blank" href="https://nikeplusdash.github.io/neon-dove/"><img src="./styles/resource/Logo-Light.png" alt="logo" width="150"/></a></center>
+<a class="img" target="_blank" href="https://nikeplusdash.github.io/neon-dove/"><img src="./styles/resource/Logo-Light.png" alt="logo" width="150"/></a>
 
 After the humiliating defeat of humanity, we had now where to go. But now with the help of hyperspace travel, all humans have started to live normally again and have inhabited many different planets. This is where Neon Dove comes in for quick and convenient food delivery while not missing out on any country's cuisine.
 
 ---
 ## Navigation
-<br>
 
 ![](styles/resource/picture.png)
 
@@ -18,7 +17,6 @@ This mainly consists of 3 pages:
 
 ---
 ## Why the name Neon Dove?
-<br/>
 
 > Because I used a generator and that's what it generated
 
@@ -35,4 +33,11 @@ Just kidding, it;s partially true but I went through a list of names and I felt 
 ---
 ## Check out the website
 
-<center><h1><a href="https://nikeplusdash.github.io/neon-dove/" target="_blank">HERE</a></h1></center>
+<h1><a class="img" href="https://nikeplusdash.github.io/neon-dove/" target="_blank">HERE</a></h1>
+
+<style>
+.img {
+    display:flex;
+    justify-content: center;
+}
+</style>
