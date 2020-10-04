@@ -78,7 +78,7 @@ input[type="button"] {
 .dummy-container {
     display: flex;
     position: relative;
-    height: 60%;
+    height: auto;
     justify-content: center;
     align-items: center;
     margin: 22px 0 22px 0;
@@ -231,7 +231,7 @@ input[type="button"] {
 }
 
 .bottom-text {
-    /* display: block; */
+    display: block;
     width: 100vw;
     height: 20px;
     text-align: center;
@@ -239,7 +239,7 @@ input[type="button"] {
     color: #00f094;
     z-index: 1;
     position: fixed;
-    bottom: 0%;
+    bottom: 1%;
 }
 
 #trending {

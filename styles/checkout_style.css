@@ -163,14 +163,26 @@ body::-webkit-scrollbar {
     transform:rotate(180deg)
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1025px) {
+    .insert-food {
+        position: relative;
+        width: 100% !important;
+        height: 80% !important;
+    }
+    .dish,.sub {
+        height: 12%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
     .render-data > img{
         position: absolute;
         width: 100%;
     }    
     .data {
         position: relative;
-        width: 100% !important;
+        width: 70% !important;
         height: 80% !important;
     }
     .landing-logo {
@@ -181,6 +193,14 @@ body::-webkit-scrollbar {
     }
     .name {
         width: 30%;
+    }
+}
+
+@media (max-width: 500px) {
+    .data {
+        position: relative;
+        width: 85% !important;
+        height: 80% !important;
     }
 }
 

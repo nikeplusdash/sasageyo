@@ -8,10 +8,12 @@ body {
     background: rgb(226, 226, 226);
     font-family: 'Cascadia Mono';
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    width: 80vw;
+    width: 75vw;
     margin: 5% auto 5% auto;
     padding: 30px;
     background: rgb(30, 30, 30);
