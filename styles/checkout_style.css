@@ -142,6 +142,7 @@ body::-webkit-scrollbar {
     background: black;
     bottom: 5%;
     right: 5%;
+    z-index: 10;
     cursor: pointer;
 }
 
