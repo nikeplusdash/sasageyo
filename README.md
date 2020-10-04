@@ -1,8 +1,4 @@
-# net-work
+# Neon-Dove
 
-The theme of an apocalypse on Earth and the only option left for the survivors is to move to outer space and build a colony of their own. Being a part of the IT industry, you've taken on the task to connect people by developing websites for the basic units of a civilization.
+Neon Dove is a restaurant serving food that used to exist in different parts of Earth prior to 2021. With the help of hyperspace travel all humans have started to live normally again and have inhabited many different planets. This is where Neon Dove comes in for quick and convenient food delivery while not missing out on any country's cuisine.
 
-Restaurant: 
-- List of all dishes to be displayed along with price.
-- An option to select the dishes.
-- Receipt generation for the selected dishes that clearly mentions the total cost.
