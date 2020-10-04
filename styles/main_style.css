@@ -279,6 +279,7 @@ input[type="button"] {
     padding: 5px;
     justify-content: center;
     background: white;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.2);
     bottom: 5%;
     right: 5%;
     z-index: 3;
